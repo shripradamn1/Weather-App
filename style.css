@@ -1,61 +1,90 @@
-*{ margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-   
 }
-body
-{
 
+body {
     background-color: black;
-    font-family: arial,sans-serif;;
+    font-family: arial, sans-serif;
 }
-.card{
-    
-    width:50%;
-    background:linear-gradient(135deg,#21acbc,#5040be);
-    color:#fff;
+
+.card {
+    width: 80%;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    background: linear-gradient(135deg, #21acbc, #5040be);
+    color: #fff;
     border-radius: 30px;
     text-align: center;
-    padding:40px 10px;
-    margin: 80px 320px;
-    height: 500px;
-  
+    padding: 40px 10px;
+    margin: 80px auto; /* Center the card horizontally */
+    height: auto; /* Adjust the height as needed */
 }
-.search{
-    width:300px;
-    color:black;
-    margin:0px 170px;
-    
-}
- input, button{
 
+.search {
+    width: 80%;
+    max-width: 300px; /* Adjust the maximum width as needed */
+    color: black;
+    margin: 0 auto; /* Center the search bar horizontally */
+}
+
+input,
+button {
     border-radius: 10px;
     color: black;
     height: 30px;
     border-color: rgb(179, 19, 19);
     text-align: center;
 }
-button{
-    width:50px;
+
+button {
+    width: 50px;
 }
-.Weather-icon{
-width: 150px;
+
+.Weather-icon {
+    width: 100%;
+    max-width: 150px; /* Adjust the maximum width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
-waether-icon,h1{
+
+waether-icon,
+h1 {
     font-size: 40px;
-    padding:0px 20px;
+    padding: 0px 20px;
 }
-.col{
-    display:flex;
+
+.col {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: space-around;
-  padding:  30px;
+    padding: 30px;
     margin-top: 50px;
 }
-img{
-    height:15;
+
+img {
+    height: 15px;
     width: 45px;
 }
-.humidity,.wind{
+
+.humidity,
+.wind {
     font-size: 25px;
     font-weight: 100;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%;
+        margin: 80px auto;
+    }
+
+    .search {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .col {
+        padding: 15px;
+    }
 }
